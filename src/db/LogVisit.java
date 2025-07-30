@@ -23,7 +23,7 @@ public class LogVisit {
 		PreparedStatement pstmt = null;
 		String sql = "INSERT INTO log (id, time, ip, browser, device) VALUES (seq_log.nextval, sysdate, ?, ?, ?)";
 		LocalDateTime now = LocalDateTime.now();
-		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd월 MM일 HH시 mm분 ss초");
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM월 dd일 HH시 mm분 ss초");
 		String time = now.format(formatter);
 		System.out.printf("접속시간 : %s 접속ip주소 : %s 접속브라우저 : %s 접속 디바이스 : %s\n\n",time, ip, browser, device);
 		try {
