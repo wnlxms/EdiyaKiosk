@@ -1397,7 +1397,6 @@ function confirmYes(){
 function alertAfterHome(str){//alert 끝나는 타이밍에 홈으로 이동
 	document.querySelector('.confirm-modal').classList.remove('show');
 	document.querySelector('.confirm-modal').style.visibility = 'hidden';
-
 	cart.length = 0;
 	cartTranslateValue = 0;
 	cartBtnDisplay();
@@ -1415,12 +1414,6 @@ function alertAfterHome(str){//alert 끝나는 타이밍에 홈으로 이동
 	}, 1400);
 }
 
-
-
-
-
-
- 
 function showToast(str){
     const toast = document.getElementById('mobileToast');
     toast.innerText = str;

@@ -377,6 +377,9 @@ h2:after{
 .m1-product-done.active{
 	background: linear-gradient(45deg, #4987C5, #3B6B9A);
 }
+/*
+경고창
+*/
 .alert-modal{
     display: flex;
     position: fixed;
@@ -450,6 +453,9 @@ h2:after{
 	text-align: center;
 	cursor: pointer;
 }
+/*
+포인트모달
+*/
 .point-modal{
     display: flex;
     position: fixed;
@@ -553,7 +559,7 @@ h2:after{
     background: #EEEEEE;
 }
 /* 
-    �뿬湲곗꽌遺��꽣 P1 移댄뀒怨좊━
+시작페이지
 */
 .p0-banner{
 	overflow: hidden;
@@ -588,6 +594,9 @@ h2:after{
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 	cursor: pointer;
 }
+/*
+1페이지 카테고리
+*/
 nav{
     display: flex;
     padding: 5px 0;
@@ -630,11 +639,9 @@ nav{
     text-align: center;
     font-size: 1.8em;
 }
-
 /*
-p1 상품영역
+1페이지 상품
 */
-
 .p1-products-btn{
     font-size: 3.6em;
     display: flex;
@@ -717,9 +724,8 @@ p1 상품영역
     color: #4987C5;
     font-weight: 500;
 }
-
 /*
-p1 �븯�떒�쁺�뿭
+1페이지 카트
 */
 .p1-bottom{
     display: flex;
@@ -824,7 +830,7 @@ p1 �븯�떒�쁺�뿭
     color: #FFFFFF;
 }
 /*
-여기부터 p2
+2페이지
 */
 .p2-cart-parent{
     height: 505px;
@@ -1067,6 +1073,9 @@ p1 �븯�떒�쁺�뿭
     font-weight: 600;
     text-align: center;
 }
+/*
+3페이지 결제완료
+*/
 .p3-area{
     display: flex;
     flex-direction: column;
@@ -1093,8 +1102,9 @@ p1 �븯�떒�쁺�뿭
     font-size: 10em;
     font-weight: 600;
 }
-
-
+/*
+포인트적립 pc 키패드
+*/
 .keypad-thumb{
     display: flex;
     flex-wrap: wrap;
@@ -1142,11 +1152,7 @@ p1 �븯�떒�쁺�뿭
 }
 
 
-
-
-
-
-/* 여기부터 모바일버전임*/
+/* 여기부터 모바일버전*/
 .mobilepage{
 	display: none;
 	padding-top: 70px;
@@ -1213,7 +1219,9 @@ h3:after{
 	transition: all 1500ms cubic-bezier(0.23, 1, 0.32, 1);
     animation: white 4s infinite;
 }
-/*여기부터 mobile p0*/
+/*
+모바일 시작페이지
+*/
 .mobile-p0-question{
 	font-size: 2em;
     font-weight: 600;
@@ -1251,7 +1259,9 @@ h3:after{
     font-weight: 500;
     color: #666666;
 }
-/*여기부터 mobile p1*/
+/*
+모바일 1페이지
+*/
 .mobile-nav{
 	position: fixed;
     z-index: 1000;
@@ -1356,16 +1366,6 @@ h3:after{
     color: #4987C5;
     padding-right: 10px;
 }
-
-
-
-
-
-
-
-
-
-
 .mobile-p1-bottom{
 	position: fixed;
 	left: 0;
@@ -1426,6 +1426,9 @@ h3:after{
 	border: 1px solid #2E3A59;
 	box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
 }
+/*
+모바일 상품옵션선택
+*/
 .mobile-m1-product{
     display: flex;
 	padding: 10px 5px;
@@ -1552,8 +1555,6 @@ h3:after{
 .m1-option-boxdetail{
 	font-size: 0.7em
 }
-
-
 .mobile-m1-countprice{
 	display: flex;
 	justify-content: space-between;
@@ -1613,7 +1614,9 @@ h3:after{
 	display: flex;
 	background: linear-gradient(45deg, #4987C5, #3B6B9A);
 }
-/* 모바일2페이지 */
+/*
+모바일 2페이지
+*/
 .mobile-p2-area{
 	padding: 10px 16px;
 	display: flex;
@@ -1829,12 +1832,6 @@ h3:after{
 .mobile-x-thumb::after{
     transform: translate(-50%, -50%) rotate(-45deg);
 }
-
-
-
-
-
-
 .mobile-toast{
     position: fixed;
     white-space: nowrap;

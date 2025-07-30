@@ -35,7 +35,7 @@ public class Dao {
 //		for(DtoReceipt2 a : list) System.out.println(a);
 	}
 	
-	public ArrayList<DtoP1Products> getProductsList(int category_id) {
+	public ArrayList<DtoP1Products> getProductsList(int category_id) {//카테고리로 상품조회
 		DBUtil d = new DBUtil();
 		ArrayList<DtoP1Products> productsList = new ArrayList<>();
 		Connection con = d.getCon();
@@ -77,8 +77,7 @@ public class Dao {
 	}
 	
 
-	
-	public DtoSelectedProduct getSelectedProduct(int id) { 
+	public DtoSelectedProduct getSelectedProduct(int id) { //상품 옵션 조회
 		DBUtil d = new DBUtil();
 		Connection con = d.getCon();
 		PreparedStatement pstmt = null;
@@ -114,7 +113,7 @@ public class Dao {
 		return selectedProduct;
 	}
 
-	public ArrayList<DtoCategory> getCategoryList() { 
+	public ArrayList<DtoCategory> getCategoryList() { //카테고리 조회
 		DBUtil d = new DBUtil();
 		Connection con = d.getCon();
 		PreparedStatement pstmt = null;
@@ -138,7 +137,7 @@ public class Dao {
 		return categoryList;
 	}
 	
-	public int pointCheck(String phoneNumber) {
+	public int pointCheck(String phoneNumber) { //포인트 조회. 없으면 계정을 자동 생성
 		DBUtil d = new DBUtil();
 		Connection con = d.getCon();
 		PreparedStatement pstmt = null;
@@ -173,7 +172,7 @@ public class Dao {
 		return 0;
 	}
 	
-	public ArrayList<DtoIdPrice> getAllProductPrice() {
+	public ArrayList<DtoIdPrice> getAllProductPrice() { //모든상품 가격얻기
 		DBUtil d = new DBUtil();
 		Connection con = d.getCon();
 		PreparedStatement pstmt = null;
@@ -198,7 +197,7 @@ public class Dao {
 	}
 	
 
-	public int getPayId() {
+	public int getPayId() { //마지막 주문번호 조회
 		DBUtil d = new DBUtil();
 		Connection con = d.getCon();
 		PreparedStatement pstmt = null;
@@ -217,7 +216,7 @@ public class Dao {
 		return 0;
 	}
 	
-	public void payStep1(String phoneNumber, int totalPrice, int pointUsed, String pay_method, String takeout) {
+	public void payStep1(String phoneNumber, int totalPrice, int pointUsed, String pay_method, String takeout) { //결제 정보입력
 		DBUtil d = new DBUtil();
 		Connection con = d.getCon();
 		PreparedStatement pstmt = null;
@@ -249,7 +248,7 @@ public class Dao {
 		}
 	}
 
-	public void payStep2(ArrayList<DtoOrderList> orderList, int payId) {
+	public void payStep2(ArrayList<DtoOrderList> orderList, int payId) { //결제 상세정보입력
 		DBUtil d = new DBUtil();
 		Connection con = d.getCon();
 		PreparedStatement pstmt = null;
@@ -275,7 +274,7 @@ public class Dao {
 			d.close(con, pstmt);
 		}
 	}
-	public DtoReceipt1 receipt1() {
+	public DtoReceipt1 receipt1() { // 영수증 출력
 		DBUtil d = new DBUtil();
 		Connection con = d.getCon();
 		PreparedStatement pstmt = null;
@@ -304,7 +303,7 @@ public class Dao {
 		}
 		return dto;
 	}
-	public ArrayList<DtoReceipt2> receipt2(int payId) {
+	public ArrayList<DtoReceipt2> receipt2(int payId) { // 영수증 출력
 		DBUtil d = new DBUtil();
 		Connection con = d.getCon();
 		PreparedStatement pstmt = null;
