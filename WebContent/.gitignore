@@ -1,0 +1,21 @@
+# 자바 클래스 파일
+*.class
+
+# 이클립스 관련 파일
+.settings/
+.classpath
+.project
+
+# 빌드 폴더
+bin/
+build/
+
+# 민감한 설정 파일
+src/db/db.properties
+
+# OS 관련
+.DS_Store
+Thumbs.db
+
+# 로그 파일
+*.log
