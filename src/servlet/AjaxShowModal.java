@@ -12,6 +12,7 @@ import org.json.simple.JSONObject;
 
 import db.Dao;
 import db.DtoSelectedProduct;
+import db.LogVisit;
 
 @WebServlet("/AjaxShowModal")
 public class AjaxShowModal extends HttpServlet {
@@ -19,6 +20,7 @@ public class AjaxShowModal extends HttpServlet {
 	
 	@SuppressWarnings("unchecked")
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		System.out.println(LogVisit.getIp(request) + " "+ LogVisit.getTime() + " 상품상세모달 실행됨");
 		int id = Integer.parseInt(request.getParameter("productid"));
 		Dao dao = new Dao();
 		DtoSelectedProduct selectedproduct = dao.getSelectedProduct(id);

@@ -14,12 +14,14 @@ import org.json.simple.JSONObject;
 
 import db.Dao;
 import db.DtoP1Products;
+import db.LogVisit;
 
 @WebServlet("/AjaxCategoryChange")
 public class AjaxCategoryChange extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		System.out.println(LogVisit.getIp(request) + " "+ LogVisit.getTime() + " 카테고리변경 실행됨");
 		int categoryId = Integer.parseInt(request.getParameter("categoryid"));
 		Dao dao = new Dao();
 		ArrayList<DtoP1Products> productsList = dao.getProductsList(categoryId);

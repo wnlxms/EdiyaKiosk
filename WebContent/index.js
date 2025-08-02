@@ -1114,16 +1114,16 @@ function auditCartIntegrity(paytype){//유효성체크
 				merchant_uid = jsonData.merchant_uid;
 				if(test){
 					if(paytype === 'danal'){
-						danal();
 						pay_method = 'card';
+						danal();
 					}
 					if(paytype === 'kakaopay'){
-						kakaopay();
 						pay_method = 'kakaopay';
+						kakaopay();
 					}
 					if(paytype === 'tosspay'){
-						tosspay();
 						pay_method = 'tosspay';
+						tosspay();
 					}
 				}else{
 					showAlert('부정행위가 탐지되었습니다. 처음부터 다시 시도해 주세요.');

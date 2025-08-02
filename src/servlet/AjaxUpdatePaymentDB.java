@@ -16,6 +16,7 @@ import org.json.simple.parser.ParseException;
 
 import db.Dao;
 import db.DtoOrderList;
+import db.LogVisit;
 
 @WebServlet("/AjaxUpdatePaymentDB")
 public class AjaxUpdatePaymentDB extends HttpServlet {
@@ -23,6 +24,7 @@ public class AjaxUpdatePaymentDB extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("UTF-8");
+		System.out.println(LogVisit.getIp(request) + " "+ LogVisit.getTime() + " PC결제 실행됨");
 		Dao dao = new Dao();
 		String phoneNumber = request.getParameter("phoneNumber");
 		int totalPrice = Integer.parseInt(request.getParameter("totalPrice"));

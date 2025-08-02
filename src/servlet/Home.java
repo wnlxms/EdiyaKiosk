@@ -22,7 +22,7 @@ public class Home extends HttpServlet {
 		Dao dao = new Dao();
 		ArrayList<DtoP1Products> productsList = dao.getProductsList(0);
 		ArrayList<DtoCategory> categoryList = dao.getCategoryList();
-		new LogVisit().logvisit(request);
+		new LogVisit().logVisit(request);
 		request.setAttribute("productsList", productsList);
 		request.setAttribute("categoryList", categoryList);
 		request.getRequestDispatcher("main.jsp").forward(request, response);

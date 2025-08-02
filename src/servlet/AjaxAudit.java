@@ -16,6 +16,7 @@ import org.json.simple.parser.ParseException;
 
 import db.Dao;
 import db.DtoIdPrice;
+import db.LogVisit;
 
 @WebServlet("/AjaxAudit")
 public class AjaxAudit extends HttpServlet {
@@ -23,6 +24,7 @@ public class AjaxAudit extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("UTF-8");
+		System.out.println(LogVisit.getIp(request) + " "+ LogVisit.getTime() + " 데이터검증 실행됨");
 		Dao dao = new Dao();
 		String phoneNumber = request.getParameter("phoneNumber");
 		int dbPoint = 0;
